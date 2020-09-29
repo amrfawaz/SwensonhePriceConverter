@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,17 @@
 		841DB52D2522C3E1007DC221 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841DB52B2522C3E1007DC221 /* Main.storyboard */; };
 		841DB52F2522C3E4007DC221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841DB52E2522C3E4007DC221 /* Assets.xcassets */; };
 		841DB5322522C3E4007DC221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841DB5302522C3E4007DC221 /* LaunchScreen.storyboard */; };
+		841DB53D2522CA88007DC221 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841DB53C2522CA88007DC221 /* Requestable.swift */; };
+		841DB53F2522CAB3007DC221 /* AlamofireRequestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841DB53E2522CAB3007DC221 /* AlamofireRequestExtensions.swift */; };
+		841DB5412522CACA007DC221 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841DB5402522CACA007DC221 /* ServiceManager.swift */; };
+		841DB5432522CAE7007DC221 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841DB5422522CAE7007DC221 /* Api.swift */; };
+		841DB5452522CB19007DC221 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841DB5442522CB19007DC221 /* Keys.swift */; };
+		841DB5472522CB4C007DC221 /* RequestParamters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841DB5462522CB4C007DC221 /* RequestParamters.swift */; };
+		841DB5492522CB83007DC221 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841DB5482522CB83007DC221 /* CustomError.swift */; };
+		841DB54C2522CD5D007DC221 /* PricesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841DB54B2522CD5D007DC221 /* PricesApi.swift */; };
+		841DB54F2522CD7A007DC221 /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841DB54E2522CD7A007DC221 /* Configurations.swift */; };
+		841DB5552522CF57007DC221 /* LatestPricesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841DB5542522CF57007DC221 /* LatestPricesResponse.swift */; };
+		841DB5572522D035007DC221 /* LatestPricesRequestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841DB5562522D035007DC221 /* LatestPricesRequestParams.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +36,17 @@
 		841DB52E2522C3E4007DC221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		841DB5312522C3E4007DC221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		841DB5332522C3E4007DC221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		841DB53C2522CA88007DC221 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		841DB53E2522CAB3007DC221 /* AlamofireRequestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireRequestExtensions.swift; sourceTree = "<group>"; };
+		841DB5402522CACA007DC221 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		841DB5422522CAE7007DC221 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		841DB5442522CB19007DC221 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		841DB5462522CB4C007DC221 /* RequestParamters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParamters.swift; sourceTree = "<group>"; };
+		841DB5482522CB83007DC221 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		841DB54B2522CD5D007DC221 /* PricesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesApi.swift; sourceTree = "<group>"; };
+		841DB54E2522CD7A007DC221 /* Configurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
+		841DB5542522CF57007DC221 /* LatestPricesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestPricesResponse.swift; sourceTree = "<group>"; };
+		841DB5562522D035007DC221 /* LatestPricesRequestParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestPricesRequestParams.swift; sourceTree = "<group>"; };
 		9A850E8804B8D0F6E263F99C /* Pods-SwensonhePriceConverter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwensonhePriceConverter.release.xcconfig"; path = "Target Support Files/Pods-SwensonhePriceConverter/Pods-SwensonhePriceConverter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,9 +84,12 @@
 			isa = PBXGroup;
 			children = (
 				841DB5392522C746007DC221 /* AppDelegate */,
-				841DB53A2522C75D007DC221 /* Assets */,
+				841DB5522522CF1B007DC221 /* PricesView */,
 				841DB5292522C3E1007DC221 /* ViewController.swift */,
+				841DB53B2522CA70007DC221 /* Network */,
 				841DB52B2522C3E1007DC221 /* Main.storyboard */,
+				841DB53A2522C75D007DC221 /* Assets */,
+				841DB54D2522CD64007DC221 /* Configurations */,
 			);
 			path = SwensonhePriceConverter;
 			sourceTree = "<group>";
@@ -85,6 +110,54 @@
 				841DB5302522C3E4007DC221 /* LaunchScreen.storyboard */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		841DB53B2522CA70007DC221 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				841DB54A2522CC6F007DC221 /* PricesApi */,
+				841DB53C2522CA88007DC221 /* Requestable.swift */,
+				841DB53E2522CAB3007DC221 /* AlamofireRequestExtensions.swift */,
+				841DB5402522CACA007DC221 /* ServiceManager.swift */,
+				841DB5422522CAE7007DC221 /* Api.swift */,
+				841DB5442522CB19007DC221 /* Keys.swift */,
+				841DB5462522CB4C007DC221 /* RequestParamters.swift */,
+				841DB5482522CB83007DC221 /* CustomError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		841DB54A2522CC6F007DC221 /* PricesApi */ = {
+			isa = PBXGroup;
+			children = (
+				841DB54B2522CD5D007DC221 /* PricesApi.swift */,
+			);
+			path = PricesApi;
+			sourceTree = "<group>";
+		};
+		841DB54D2522CD64007DC221 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				841DB54E2522CD7A007DC221 /* Configurations.swift */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		841DB5522522CF1B007DC221 /* PricesView */ = {
+			isa = PBXGroup;
+			children = (
+				841DB5532522CF41007DC221 /* Models */,
+			);
+			path = PricesView;
+			sourceTree = "<group>";
+		};
+		841DB5532522CF41007DC221 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				841DB5542522CF57007DC221 /* LatestPricesResponse.swift */,
+				841DB5562522D035007DC221 /* LatestPricesRequestParams.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		8F832EE9D3A5B6E75F73F1C6 /* Pods */ = {
@@ -115,6 +188,7 @@
 				841DB51E2522C3E1007DC221 /* Sources */,
 				841DB51F2522C3E1007DC221 /* Frameworks */,
 				841DB5202522C3E1007DC221 /* Resources */,
+				4275DAA4A74888A4DA771BB7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,6 +268,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4275DAA4A74888A4DA771BB7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwensonhePriceConverter/Pods-SwensonhePriceConverter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwensonhePriceConverter/Pods-SwensonhePriceConverter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwensonhePriceConverter/Pods-SwensonhePriceConverter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -201,8 +292,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841DB5432522CAE7007DC221 /* Api.swift in Sources */,
+				841DB5472522CB4C007DC221 /* RequestParamters.swift in Sources */,
+				841DB53F2522CAB3007DC221 /* AlamofireRequestExtensions.swift in Sources */,
+				841DB5552522CF57007DC221 /* LatestPricesResponse.swift in Sources */,
+				841DB53D2522CA88007DC221 /* Requestable.swift in Sources */,
+				841DB5572522D035007DC221 /* LatestPricesRequestParams.swift in Sources */,
 				841DB52A2522C3E1007DC221 /* ViewController.swift in Sources */,
+				841DB54F2522CD7A007DC221 /* Configurations.swift in Sources */,
+				841DB5492522CB83007DC221 /* CustomError.swift in Sources */,
+				841DB54C2522CD5D007DC221 /* PricesApi.swift in Sources */,
+				841DB5452522CB19007DC221 /* Keys.swift in Sources */,
 				841DB5262522C3E1007DC221 /* AppDelegate.swift in Sources */,
+				841DB5412522CACA007DC221 /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
