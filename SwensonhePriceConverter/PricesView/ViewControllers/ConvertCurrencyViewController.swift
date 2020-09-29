@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ConvertCurrencyViewController.swift
 //  SwensonhePriceConverter
 //
 //  Created by AmrFawaz on 9/29/20.
@@ -8,13 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ConvertCurrencyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
 
-
 }
-

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LatestPrices: Codable {
+class LatestCurrencies: Codable {
     let success: Bool?
     let base: String?
     let rates: [String: Double]

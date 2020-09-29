@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CurrencyCell" id="KGk-i7-Jjw" customClass="CurrencyCell" customModule="SwensonhePriceConverter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="and-Aw-gbV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmn-8L-ZLC">
+                                <rect key="frame" x="16" y="8" width="92" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="EcY-v5-wyi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xld-KJ-lNc">
+                                <rect key="frame" x="124" y="8" width="180" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="gmn-8L-ZLC" secondAttribute="bottom" constant="8" id="8Fq-dR-zNg"/>
+                            <constraint firstAttribute="bottom" secondItem="xld-KJ-lNc" secondAttribute="bottom" constant="8" id="GP7-PZ-UW1"/>
+                            <constraint firstItem="xld-KJ-lNc" firstAttribute="leading" secondItem="gmn-8L-ZLC" secondAttribute="trailing" constant="16" id="Ruu-K8-xKd"/>
+                            <constraint firstItem="xld-KJ-lNc" firstAttribute="width" secondItem="and-Aw-gbV" secondAttribute="width" multiplier="0.25" priority="250" id="Sdf-7y-81U"/>
+                            <constraint firstItem="xld-KJ-lNc" firstAttribute="top" secondItem="and-Aw-gbV" secondAttribute="top" constant="8" id="ZKa-Tq-ymm"/>
+                            <constraint firstAttribute="trailing" secondItem="xld-KJ-lNc" secondAttribute="trailing" constant="16" id="cvW-9E-dg0"/>
+                            <constraint firstItem="gmn-8L-ZLC" firstAttribute="top" secondItem="and-Aw-gbV" secondAttribute="top" constant="8" id="gIh-fZ-2Ab"/>
+                            <constraint firstItem="gmn-8L-ZLC" firstAttribute="leading" secondItem="and-Aw-gbV" secondAttribute="leading" constant="16" id="m06-fJ-3Sl"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="and-Aw-gbV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="DyJ-mx-MUi"/>
+                    <constraint firstAttribute="bottom" secondItem="and-Aw-gbV" secondAttribute="bottom" id="gNT-8N-6jc"/>
+                    <constraint firstItem="and-Aw-gbV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hxq-0u-lB2"/>
+                    <constraint firstAttribute="trailing" secondItem="and-Aw-gbV" secondAttribute="trailing" id="wvL-fl-bc9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="labelCurrency" destination="gmn-8L-ZLC" id="Shl-pK-cei"/>
+                <outlet property="labelCurrencyRate" destination="xld-KJ-lNc" id="Bdm-ua-Rn0"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="154.01785714285714"/>
+        </tableViewCell>
+    </objects>
+</document>

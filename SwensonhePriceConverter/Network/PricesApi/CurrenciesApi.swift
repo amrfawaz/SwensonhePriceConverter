@@ -1,5 +1,5 @@
 //
-//  PricesApi.swift
+//  CurrenciesApi.swift
 //  SwensonhePriceConverter
 //
 //  Created by AmrFawaz on 9/29/20.
@@ -12,21 +12,21 @@ import PromiseKit
 import UIKit
 
 
-class PricesApi: Api {
+class CurrenciesApi: Api {
     enum APIRouter: Requestable {
         
-        case getLatestPrices(PricesApi)
+        case getLatestCurrencies(CurrenciesApi)
 
         var path: String {
             switch self {
-            case .getLatestPrices:
+            case .getLatestCurrencies:
                 return "/latest"
             }
         }
 
         var method: HTTPMethod {
             switch self {
-            case .getLatestPrices:
+            case .getLatestCurrencies:
                 return .get
             }
         }
@@ -34,7 +34,7 @@ class PricesApi: Api {
         
         var parameters: Parameters? {
             switch self {
-            case let .getLatestPrices(api):
+            case let .getLatestCurrencies(api):
                 return api.params?.getParamsAsJson()
             }
         }
@@ -42,11 +42,10 @@ class PricesApi: Api {
 }
 
 
-extension PricesApi {
-    
+extension CurrenciesApi {
 
-    func getLatestPrices() -> Promise<LatestPrices> {
-        return fireRequestWithSingleResponse(requestable: APIRouter.getLatestPrices(self))
+    func getLatestCurrencies() -> Promise<LatestCurrencies> {
+        return fireRequestWithSingleResponse(requestable: APIRouter.getLatestCurrencies(self))
     }
 
 }

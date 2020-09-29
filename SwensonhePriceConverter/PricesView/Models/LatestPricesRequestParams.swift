@@ -9,6 +9,6 @@
 import Foundation
 
 
-class LatestPricesRequestParams: RequestParamters {
+class LatestCurrenciesRequestParams: RequestParamters {
     var access_key = "66cadd3fd4cf4b8fc3971fedd82728eb"
 }
