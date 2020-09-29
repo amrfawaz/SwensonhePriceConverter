@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3E6ED52A5C9F62D1D8679378 /* Pods_SwensonhePriceConverter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0289955D6B0E06EA2CA26E92 /* Pods_SwensonhePriceConverter.framework */; };
 		841DB5262522C3E1007DC221 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841DB5252522C3E1007DC221 /* AppDelegate.swift */; };
-		841DB5282522C3E1007DC221 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841DB5272522C3E1007DC221 /* SceneDelegate.swift */; };
 		841DB52A2522C3E1007DC221 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841DB5292522C3E1007DC221 /* ViewController.swift */; };
 		841DB52D2522C3E1007DC221 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841DB52B2522C3E1007DC221 /* Main.storyboard */; };
 		841DB52F2522C3E4007DC221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841DB52E2522C3E4007DC221 /* Assets.xcassets */; };
@@ -21,7 +20,6 @@
 		25E8C97848F4535766E4B8AF /* Pods-SwensonhePriceConverter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwensonhePriceConverter.debug.xcconfig"; path = "Target Support Files/Pods-SwensonhePriceConverter/Pods-SwensonhePriceConverter.debug.xcconfig"; sourceTree = "<group>"; };
 		841DB5222522C3E1007DC221 /* SwensonhePriceConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwensonhePriceConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		841DB5252522C3E1007DC221 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		841DB5272522C3E1007DC221 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		841DB5292522C3E1007DC221 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		841DB52C2522C3E1007DC221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		841DB52E2522C3E4007DC221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,15 +61,30 @@
 		841DB5242522C3E1007DC221 /* SwensonhePriceConverter */ = {
 			isa = PBXGroup;
 			children = (
-				841DB5252522C3E1007DC221 /* AppDelegate.swift */,
-				841DB5272522C3E1007DC221 /* SceneDelegate.swift */,
+				841DB5392522C746007DC221 /* AppDelegate */,
+				841DB53A2522C75D007DC221 /* Assets */,
 				841DB5292522C3E1007DC221 /* ViewController.swift */,
 				841DB52B2522C3E1007DC221 /* Main.storyboard */,
-				841DB52E2522C3E4007DC221 /* Assets.xcassets */,
-				841DB5302522C3E4007DC221 /* LaunchScreen.storyboard */,
-				841DB5332522C3E4007DC221 /* Info.plist */,
 			);
 			path = SwensonhePriceConverter;
+			sourceTree = "<group>";
+		};
+		841DB5392522C746007DC221 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				841DB5252522C3E1007DC221 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		841DB53A2522C75D007DC221 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				841DB5332522C3E4007DC221 /* Info.plist */,
+				841DB52E2522C3E4007DC221 /* Assets.xcassets */,
+				841DB5302522C3E4007DC221 /* LaunchScreen.storyboard */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		8F832EE9D3A5B6E75F73F1C6 /* Pods */ = {
@@ -80,7 +93,6 @@
 				25E8C97848F4535766E4B8AF /* Pods-SwensonhePriceConverter.debug.xcconfig */,
 				9A850E8804B8D0F6E263F99C /* Pods-SwensonhePriceConverter.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -191,7 +203,6 @@
 			files = (
 				841DB52A2522C3E1007DC221 /* ViewController.swift in Sources */,
 				841DB5262522C3E1007DC221 /* AppDelegate.swift in Sources */,
-				841DB5282522C3E1007DC221 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +349,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LAX6L7LB4;
-				INFOPLIST_FILE = SwensonhePriceConverter/Info.plist;
+				INFOPLIST_FILE = SwensonhePriceConverter/Assets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -346,7 +357,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.SwensonhePriceConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -357,7 +368,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LAX6L7LB4;
-				INFOPLIST_FILE = SwensonhePriceConverter/Info.plist;
+				INFOPLIST_FILE = SwensonhePriceConverter/Assets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -365,7 +376,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.SwensonhePriceConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
