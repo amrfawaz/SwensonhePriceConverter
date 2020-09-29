@@ -11,5 +11,5 @@ import Foundation
 class LatestCurrencies: Codable {
     let success: Bool?
     let base: String?
-    let rates: [String: Double]
+    var rates: [String: Double]
 }

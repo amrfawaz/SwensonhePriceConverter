@@ -8,39 +8,48 @@
 
 import Foundation
 import UIKit
-import AlamofireImage
 
 protocol CurrenciesView: class {
     func onGetCurrenciesSuccess()
-    func onGetCurrenciesFail()
+    func onGetCurrenciesFail(error: CustomError)
 }
 class CurrenciesViewModel {
     private weak var view: CurrenciesView?
     private var currencies: LatestCurrencies?
+    let title = "Currencies"
     var baseCurrency: String?
     var numberOfCurrencies: Int {
         get {
             return currencies?.rates.keys.count ?? 0
         }
     }
+    
+    
     init(view: CurrenciesView) {
         self.view = view
     }
-    
     
     func registerCells(tableView: UITableView) {
         tableView.register(UINib(nibName: String(describing: CurrencyCell.self), bundle: nil), forCellReuseIdentifier: String(describing: CurrencyCell.self))
     }
     
-    
     func configureCell(cell: CurrencyCell, index: IndexPath) {
-        
         let currency = currencies?.rates[index.row]
-        
         cell.labelCurrency.text = currency?.key
         cell.labelCurrencyRate.text = String(format: "%.2f", currency?.value ?? "")
     }
+    
+    func navigateToConvertCurrency(index: IndexPath) {
+        let currency = currencies?.rates[index.row]
+        
+        let convertCurrencyViewController = Router.getDestinationViewController(storyboard: StoryboardMapper.ConvertCurrency.convertCurrency) as? ConvertCurrencyViewController
+        
+        convertCurrencyViewController?.secnondCurrency = [currency!.key: currency!.value]
+        convertCurrencyViewController?.baseCurrency = self.baseCurrency
+        
+        Router.navigate(destination: convertCurrencyViewController!, presentationType: .push)
 
+    }
     
     func getCurrenciesRate() {
         let ordersApi = CurrenciesApi()
@@ -51,18 +60,17 @@ class CurrenciesViewModel {
             self.baseCurrency = response.base
             self.view?.onGetCurrenciesSuccess()
         }.catch { error in
-            self.view?.onGetCurrenciesFail()
+            self.view?.onGetCurrenciesFail(error: error as! CustomError)
         }
     }
     
-
-}
-
-
-extension Dictionary {
-    subscript(i:Int) -> (key:Key,value:Value) {
-        get {
-            return self[index(startIndex, offsetBy: i)];
+    func showAlert(message: String) {
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        
+        let doneAction = UIAlertAction(title: "Retry", style: .default) { _ in
+            self.getCurrenciesRate()
         }
+        alertController.addAction(doneAction)
+        Router.getCurrentViewController()?.present(alertController, animated: true, completion: nil)
     }
 }

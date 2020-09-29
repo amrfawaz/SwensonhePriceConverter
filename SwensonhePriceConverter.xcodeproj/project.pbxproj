@@ -29,6 +29,12 @@
 		841DB56A25232BE2007DC221 /* CurrenciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841DB56925232BE2007DC221 /* CurrenciesViewController.swift */; };
 		841DB56C25232C15007DC221 /* CurrenciesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841DB56B25232C15007DC221 /* CurrenciesViewModel.swift */; };
 		84DFCE1325236D770018AD4A /* ConvertCurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DFCE1225236D770018AD4A /* ConvertCurrencyViewController.swift */; };
+		84DFCE1625236ED70018AD4A /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DFCE1525236ED70018AD4A /* Dictionary+Extension.swift */; };
+		84DFCE1925236F310018AD4A /* ConvertCurrencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DFCE1825236F310018AD4A /* ConvertCurrencyViewModel.swift */; };
+		84DFCE1F25236FE00018AD4A /* ConvertCurrency.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DFCE1E25236FE00018AD4A /* ConvertCurrency.storyboard */; };
+		84DFCE22252372080018AD4A /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DFCE21252372080018AD4A /* Storyboard.swift */; };
+		84DFCE242523726B0018AD4A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DFCE232523726B0018AD4A /* Router.swift */; };
+		84DFCE26252372BD0018AD4A /* UIViewController+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DFCE25252372BD0018AD4A /* UIViewController+Extenstion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +63,12 @@
 		841DB56925232BE2007DC221 /* CurrenciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesViewController.swift; sourceTree = "<group>"; };
 		841DB56B25232C15007DC221 /* CurrenciesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesViewModel.swift; sourceTree = "<group>"; };
 		84DFCE1225236D770018AD4A /* ConvertCurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertCurrencyViewController.swift; sourceTree = "<group>"; };
+		84DFCE1525236ED70018AD4A /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		84DFCE1825236F310018AD4A /* ConvertCurrencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertCurrencyViewModel.swift; sourceTree = "<group>"; };
+		84DFCE1E25236FE00018AD4A /* ConvertCurrency.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConvertCurrency.storyboard; sourceTree = "<group>"; };
+		84DFCE21252372080018AD4A /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		84DFCE232523726B0018AD4A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		84DFCE25252372BD0018AD4A /* UIViewController+Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extenstion.swift"; sourceTree = "<group>"; };
 		9A850E8804B8D0F6E263F99C /* Pods-SwensonhePriceConverter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwensonhePriceConverter.release.xcconfig"; path = "Target Support Files/Pods-SwensonhePriceConverter/Pods-SwensonhePriceConverter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,11 +105,12 @@
 		841DB5242522C3E1007DC221 /* SwensonhePriceConverter */ = {
 			isa = PBXGroup;
 			children = (
-				84DFCE1425236D870018AD4A /* ConvertCurrencyView */,
 				841DB5392522C746007DC221 /* AppDelegate */,
 				841DB5522522CF1B007DC221 /* PricesView */,
+				84DFCE1725236F0C0018AD4A /* ConvertCurrencyView */,
 				841DB53B2522CA70007DC221 /* Network */,
 				841DB55F25232866007DC221 /* Helpers */,
+				84DFCE20252371F30018AD4A /* Router */,
 				841DB53A2522C75D007DC221 /* Assets */,
 				841DB54D2522CD64007DC221 /* Configurations */,
 			);
@@ -185,7 +198,6 @@
 			isa = PBXGroup;
 			children = (
 				841DB56925232BE2007DC221 /* CurrenciesViewController.swift */,
-				84DFCE1225236D770018AD4A /* ConvertCurrencyViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -219,6 +231,8 @@
 			isa = PBXGroup;
 			children = (
 				841DB56125232892007DC221 /* UIView+Extension.swift */,
+				84DFCE1525236ED70018AD4A /* Dictionary+Extension.swift */,
+				84DFCE25252372BD0018AD4A /* UIViewController+Extenstion.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -240,11 +254,55 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		84DFCE1425236D870018AD4A /* ConvertCurrencyView */ = {
+		84DFCE1725236F0C0018AD4A /* ConvertCurrencyView */ = {
 			isa = PBXGroup;
 			children = (
+				84DFCE1C25236FC70018AD4A /* Views */,
+				84DFCE1B25236FC00018AD4A /* ViewControllers */,
+				84DFCE1A25236FB80018AD4A /* ViewModels */,
 			);
 			path = ConvertCurrencyView;
+			sourceTree = "<group>";
+		};
+		84DFCE1A25236FB80018AD4A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				84DFCE1825236F310018AD4A /* ConvertCurrencyViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		84DFCE1B25236FC00018AD4A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				84DFCE1225236D770018AD4A /* ConvertCurrencyViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		84DFCE1C25236FC70018AD4A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84DFCE1D25236FCD0018AD4A /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84DFCE1D25236FCD0018AD4A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				84DFCE1E25236FE00018AD4A /* ConvertCurrency.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		84DFCE20252371F30018AD4A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				84DFCE21252372080018AD4A /* Storyboard.swift */,
+				84DFCE232523726B0018AD4A /* Router.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		8F832EE9D3A5B6E75F73F1C6 /* Pods */ = {
@@ -326,6 +384,7 @@
 			files = (
 				841DB5322522C3E4007DC221 /* LaunchScreen.storyboard in Resources */,
 				841DB568252328FD007DC221 /* CurrencyCell.xib in Resources */,
+				84DFCE1F25236FE00018AD4A /* ConvertCurrency.storyboard in Resources */,
 				841DB52F2522C3E4007DC221 /* Assets.xcassets in Resources */,
 				841DB55E252326E8007DC221 /* Currencies.storyboard in Resources */,
 			);
@@ -385,18 +444,23 @@
 				841DB5472522CB4C007DC221 /* RequestParamters.swift in Sources */,
 				841DB53F2522CAB3007DC221 /* AlamofireRequestExtensions.swift in Sources */,
 				841DB5552522CF57007DC221 /* LatestCurrencies.swift in Sources */,
+				84DFCE1625236ED70018AD4A /* Dictionary+Extension.swift in Sources */,
 				841DB53D2522CA88007DC221 /* Requestable.swift in Sources */,
 				841DB5572522D035007DC221 /* LatestPricesRequestParams.swift in Sources */,
 				841DB54F2522CD7A007DC221 /* Configurations.swift in Sources */,
 				841DB56C25232C15007DC221 /* CurrenciesViewModel.swift in Sources */,
+				84DFCE242523726B0018AD4A /* Router.swift in Sources */,
 				841DB56225232892007DC221 /* UIView+Extension.swift in Sources */,
 				841DB5492522CB83007DC221 /* CustomError.swift in Sources */,
 				841DB56A25232BE2007DC221 /* CurrenciesViewController.swift in Sources */,
 				84DFCE1325236D770018AD4A /* ConvertCurrencyViewController.swift in Sources */,
+				84DFCE1925236F310018AD4A /* ConvertCurrencyViewModel.swift in Sources */,
 				841DB54C2522CD5D007DC221 /* CurrenciesApi.swift in Sources */,
+				84DFCE22252372080018AD4A /* Storyboard.swift in Sources */,
 				841DB5452522CB19007DC221 /* Keys.swift in Sources */,
 				841DB5262522C3E1007DC221 /* AppDelegate.swift in Sources */,
 				841DB5412522CACA007DC221 /* ServiceManager.swift in Sources */,
+				84DFCE26252372BD0018AD4A /* UIViewController+Extenstion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

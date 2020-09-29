@@ -10,6 +10,4 @@ target 'SwensonhePriceConverter' do
   pod 'CodableAlamofire', '1.1.2'
   pod 'SwiftyBeaver', '1.8.3'
   pod 'RealmSwift'
-  pod 'AlamofireImage'
-
 end

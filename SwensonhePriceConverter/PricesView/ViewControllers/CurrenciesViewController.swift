@@ -9,15 +9,16 @@
 import UIKit
 
 class CurrenciesViewController: UIViewController {
-    @IBOutlet weak var imageViewBaseCurrency: UIImageView!
     @IBOutlet weak var labelBaseCurrrency: UILabel!
     @IBOutlet weak var tableViewCurrencies: UITableView!
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     
-    var viewModel: CurrenciesViewModel!
+    private var viewModel: CurrenciesViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         initViewModel()
+        title = viewModel.title
         viewModel.registerCells(tableView: tableViewCurrencies)
         self.viewModel.getCurrenciesRate()
     }
@@ -44,17 +45,23 @@ extension CurrenciesViewController: UITableViewDataSource, UITableViewDelegate {
         viewModel.configureCell(cell: cell!, index: indexPath)
         return cell!
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.navigateToConvertCurrency(index: indexPath)
+    }
 }
 
 
 extension CurrenciesViewController: CurrenciesView {
     func onGetCurrenciesSuccess() {
+        self.indicatorView.stopAnimating()
         setBaseCurrency()
         tableViewCurrencies.reloadData()
     }
     
-    func onGetCurrenciesFail() {
-        
+    func onGetCurrenciesFail(error: CustomError) {
+        self.indicatorView.stopAnimating()
+        viewModel.showAlert(message: error.message ?? "")
     }
     
 
